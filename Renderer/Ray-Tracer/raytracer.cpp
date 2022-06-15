@@ -334,18 +334,18 @@ int main(int argc, char** argv)
 
 	std::vector<Model*> models; 
 
-	Model* mtable = new Model("mtable.obj");
-	Model* mplate = new Model("mplate.obj");
-	Model* mcoffhand = new Model("mcoffhand.obj");
-	Model* mcoffbody = new Model("mcoffbody.obj");
-	Model* mcoffetop = new Model("mcoffetop.obj");
-	Model* mtray = new Model("mtray.obj");
-	Model* mwall = new Model("mwall.obj");
-	Model* mspoon = new Model("mspoon.obj");
-	Model* mmirror = new Model("mmirror.obj");
-	Model* mframemirror = new Model("mframemirror.obj");
-	Model* mmug = new Model("mmug.obj");
-	Model* mglass = new Model("mglass.obj");
+	Model* mtable = new Model("resources/mtable.obj");
+	Model* mplate = new Model("resources/mplate.obj");
+	Model* mcoffhand = new Model("resources/mcoffhand.obj");
+	Model* mcoffbody = new Model("resources/mcoffbody.obj");
+	Model* mcoffetop = new Model("resources/mcoffetop.obj");
+	Model* mtray = new Model("resources/mtray.obj");
+	Model* mwall = new Model("resources/mwall.obj");
+	Model* mspoon = new Model("resources/mspoon.obj");
+	Model* mmirror = new Model("resources/mmirror.obj");
+	Model* mframemirror = new Model("resources/mframemirror.obj");
+	Model* mmug = new Model("resources/mmug.obj");
+	Model* mglass = new Model("resources/mglass.obj");
 
 	mmug->name = "mmug";
 	mtable->name = "mtable";

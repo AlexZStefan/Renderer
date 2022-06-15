@@ -339,19 +339,19 @@ int main(int argc, char **argv)
     std::vector <Model*> models;
 
     //carlo = new Model("cc_t.obj");
-    Model *pmirror_frame = new Model("pmirror_frame.obj");
-    Model *pmirror_mirror = new Model("pmirror_mirror.obj");
-    Model *pmug = new Model("pmug.obj");
-    Model *pplate = new Model("pplate.obj");
-    Model *pglass = new Model("pglass.obj");
-    Model *pspoon = new Model("pspoon.obj");
-    Model *pstand = new Model("pstand.obj");
-    Model * pcaff1 = new Model("pcaff1.obj");
-    Model * porg1 = new Model("porange1.obj");
-    Model * porg2 = new Model("porange2.obj");
-    Model * porg3 = new Model("porange3.obj");
+    Model *pmirror_frame = new Model("resources/pmirror_frame.obj");
+    Model *pmirror_mirror = new Model("resources/pmirror_mirror.obj");
+    Model *pmug = new Model("resources/pmug.obj");
+    Model *pplate = new Model("resources/pplate.obj");
+    Model *pglass = new Model("resources/pglass.obj");
+    Model *pspoon = new Model("resources/pspoon.obj");
+    Model *pstand = new Model("resources/pstand.obj");
+    Model * pcaff1 = new Model("resources/pcaff1.obj");
+    Model * porg1 = new Model("resources/porange1.obj");
+    Model * porg2 = new Model("resources/porange2.obj");
+    Model * porg3 = new Model("resources/porange3.obj");
 
-    Model * ptray = new Model("mtray.obj");
+    Model * ptray = new Model("resources/mtray.obj");
 
     models.push_back(pmirror_frame);
     models.push_back(pmirror_mirror);
