@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Projects\pbrt-v3\src\ext\openexr\IlmBase\Half\half.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\CMakeFiles\616b61bcaaec2f989dc81b8fb1e6d565\eLut.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\CMakeFiles\616b61bcaaec2f989dc81b8fb1e6d565\toFloat.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Projects\pbrt-v3\src\ext\openexr\IlmBase\Half\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{C140C28B-3A15-3F70-82AD-B703FCB968E9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4895B676-6BB2-3234-9CC7-9C7636CAD5F0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

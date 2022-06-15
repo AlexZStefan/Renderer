@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B6AF8364-16EB-35E7-87C1-5371F768002B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\pbrt-v3\src\ext\zlib;C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\zlib;C:\Projects\pbrt-v3\src\ext\openexr\IlmBase\Iex;C:\Projects\pbrt-v3\src\ext\openexr\IlmBase\Imath;C:\Projects\pbrt-v3\src\ext\openexr\IlmBase\IlmThread;C:\Projects\pbrt-v3\src\ext\openexr\IlmBase\Half;C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\openexr\IlmBase\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\pbrt-v3\src\ext\zlib;C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\zlib;C:\Projects\pbrt-v3\src\ext\openexr\IlmBase\Iex;C:\Projects\pbrt-v3\src\ext\openexr\IlmBase\Imath;C:\Projects\pbrt-v3\src\ext\openexr\IlmBase\IlmThread;C:\Projects\pbrt-v3\src\ext\openexr\IlmBase\Half;C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\openexr\IlmBase\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\pbrt-v3\src\ext\zlib;C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\zlib;C:\Projects\pbrt-v3\src\ext\openexr\IlmBase\Iex;C:\Projects\pbrt-v3\src\ext\openexr\IlmBase\Imath;C:\Projects\pbrt-v3\src\ext\openexr\IlmBase\IlmThread;C:\Projects\pbrt-v3\src\ext\openexr\IlmBase\Half;C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\openexr\IlmBase\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\pbrt-v3\src\ext\zlib;C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\zlib;C:\Projects\pbrt-v3\src\ext\openexr\IlmBase\Iex;C:\Projects\pbrt-v3\src\ext\openexr\IlmBase\Imath;C:\Projects\pbrt-v3\src\ext\openexr\IlmBase\IlmThread;C:\Projects\pbrt-v3\src\ext\openexr\IlmBase\Half;C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\openexr\IlmBase\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Projects\pbrt-v3\src\ext\openexr\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Projects/pbrt-v3/src/ext/openexr/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Programs\CMake\bin\cmake.exe -SC:/Projects/pbrt-v3 -BC:/Projects/cmp5359-computer-graphics-milestone-repository-AlexZStefan/ComputerGraphics/pbrt/build --check-stamp-file C:/Projects/cmp5359-computer-graphics-milestone-repository-AlexZStefan/ComputerGraphics/pbrt/build/src/ext/openexr/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\openexr\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Projects/pbrt-v3/src/ext/openexr/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Programs\CMake\bin\cmake.exe -SC:/Projects/pbrt-v3 -BC:/Projects/cmp5359-computer-graphics-milestone-repository-AlexZStefan/ComputerGraphics/pbrt/build --check-stamp-file C:/Projects/cmp5359-computer-graphics-milestone-repository-AlexZStefan/ComputerGraphics/pbrt/build/src/ext/openexr/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\openexr\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Projects/pbrt-v3/src/ext/openexr/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Programs\CMake\bin\cmake.exe -SC:/Projects/pbrt-v3 -BC:/Projects/cmp5359-computer-graphics-milestone-repository-AlexZStefan/ComputerGraphics/pbrt/build --check-stamp-file C:/Projects/cmp5359-computer-graphics-milestone-repository-AlexZStefan/ComputerGraphics/pbrt/build/src/ext/openexr/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\openexr\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Projects/pbrt-v3/src/ext/openexr/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Programs\CMake\bin\cmake.exe -SC:/Projects/pbrt-v3 -BC:/Projects/cmp5359-computer-graphics-milestone-repository-AlexZStefan/ComputerGraphics/pbrt/build --check-stamp-file C:/Projects/cmp5359-computer-graphics-milestone-repository-AlexZStefan/ComputerGraphics/pbrt/build/src/ext/openexr/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\openexr\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\ZERO_CHECK.vcxproj">
+      <Project>{CB3D8751-033A-3BDB-A148-860F1D82FF62}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\openexr\IlmBase\Half\Half.vcxproj">
+      <Project>{3A6477C5-B861-3A72-9681-1F47DE996DC3}</Project>
+      <Name>Half</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\openexr\IlmBase\Iex\Iex.vcxproj">
+      <Project>{DB24D9D0-BAEA-3513-BC73-E71E000DA0D3}</Project>
+      <Name>Iex</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\openexr\IlmBase\IexMath\IexMath.vcxproj">
+      <Project>{371DEC4F-DA6E-359A-A2CD-F192C1F8DA25}</Project>
+      <Name>IexMath</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\openexr\OpenEXR\IlmImf\IlmImf.vcxproj">
+      <Project>{069E3144-E811-32D9-A066-2B95675DDCDE}</Project>
+      <Name>IlmImf</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\openexr\OpenEXR\IlmImf\IlmImf-obj.vcxproj">
+      <Project>{0449B8F1-C7D7-30F3-9B89-0CA8D982C6E8}</Project>
+      <Name>IlmImf-obj</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\openexr\IlmBase\IlmThread\IlmThread.vcxproj">
+      <Project>{9AAA9839-F43F-3BCB-A91D-E7E9267473C5}</Project>
+      <Name>IlmThread</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\openexr\IlmBase\Imath\Imath.vcxproj">
+      <Project>{CB80F9D2-32C1-3DB7-BFE3-7682BAC4FD2E}</Project>
+      <Name>Imath</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\openexr\OpenEXR\IlmImf\b44ExpLogTable.vcxproj">
+      <Project>{22B8BA58-AEA2-333A-A059-E3E9C6797F63}</Project>
+      <Name>b44ExpLogTable</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\openexr\OpenEXR\IlmImf\dwaLookups.vcxproj">
+      <Project>{7327EFF4-DE41-318A-B006-B32B8CBE9B37}</Project>
+      <Name>dwaLookups</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\openexr\IlmBase\Half\eLut.vcxproj">
+      <Project>{3DE47FAB-7D79-376E-A8BB-65431246285A}</Project>
+      <Name>eLut</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\cmp5359-computer-graphics-milestone-repository-AlexZStefan\ComputerGraphics\pbrt\build\src\ext\openexr\IlmBase\Half\toFloat.vcxproj">
+      <Project>{31106B51-8C7F-3B38-A772-4CB1FB8B7F12}</Project>
+      <Name>toFloat</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
