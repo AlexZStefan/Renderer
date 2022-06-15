@@ -1,12 +1,9 @@
-// A practical implementation of the rasterization algorithm in software.
 #include "tgaimage.h"
-
 #include "geometry.h"
 #include "SDL.h" 
 #include "model.h"
 #include <fstream>
 #include <chrono>
-
 
 #define M_PI 3.14159265359
 
@@ -15,7 +12,6 @@ enum FitResolutionGate { kFill = 0, kOverscan };
 
 TGAImage scene_image;
 TGAColor scene_color;
-
 
 // Compute screen coordinates based on a physically-based camera model
 // http://www.scratchapixel.com/lessons/3d-basic-rendering/3d-viewing-pinhole-camera
@@ -184,7 +180,6 @@ void putpixel(SDL_Surface* surface, int x, int y, Uint32 pixel)
 
 Matrix44f lookAt(const Vec3f eye, const Vec3f target, const Vec3f tmp = Vec3f(0, 1, 0))
 {
-    // TASK 5
     // Calculate forward, right and up vectors
 
     // z axis
@@ -213,47 +208,6 @@ Matrix44f lookAt(const Vec3f eye, const Vec3f target, const Vec3f tmp = Vec3f(0,
         orientation[i][2] = zaxis[i];
         translation[3][i] = eye[i];
     }
-
-    //orientation[0][0] = xaxis.x;
-    //orientation[1][0] = xaxis.y;
-    //orientation[2][0] = xaxis.z;
-    //orientation[3][0] = 0;
-
-    //orientation[0][1] = yaxis.x;
-    //orientation[1][1] = yaxis.y;
-    //orientation[2][1] = yaxis.z;
-    //orientation[3][1] = 0;
-
-    //orientation[0][2] = zaxis.x;
-    //orientation[1][2] = zaxis.y;
-    //orientation[2][2] = zaxis.z;
-    //orientation[3][2] = 0;
-
-    //orientation[0][3] = 0;
-    //orientation[1][3] = 0;
-    //orientation[2][3] = 0;
-    //orientation[3][3] = 1;
-
-    ////translation
-    //translation[0][0] = 1;
-    //translation[1][0] = 0;
-    //translation[2][0] = 0;
-    //translation[3][0] = -eye.x;
-
-    //translation[0][1] = 0;
-    //translation[1][1] = 1;
-    //translation[2][1] = 0;
-    //translation[3][1] = -eye.y;
-
-    //translation[0][2] = 0;
-    //translation[1][2] = 0;
-    //translation[2][2] = 1;
-    //translation[3][2] = -eye.z;
-
-    //translation[0][3] = 0;
-    //translation[1][3] = 0;
-    //translation[2][3] = 0;
-    //translation[3][3] = 1;
 
     return orientation * translation;
 }
@@ -338,7 +292,9 @@ int main(int argc, char **argv)
     }
     std::vector <Model*> models;
 
-    //carlo = new Model("cc_t.obj");
+    // load models
+    {
+
     Model *pmirror_frame = new Model("resources/pmirror_frame.obj");
     Model *pmirror_mirror = new Model("resources/pmirror_mirror.obj");
     Model *pmug = new Model("resources/pmug.obj");
@@ -365,8 +321,8 @@ int main(int argc, char **argv)
     models.push_back(porg1);
     models.push_back(porg2);
     models.push_back(porg3);
+    }
 
-    //models.push_back(carlo);
     // initialise SDL2
     init();
 
@@ -389,14 +345,12 @@ int main(int argc, char **argv)
     float *depthBuffer = new float[imageWidth * imageHeight];
     for (uint32_t i = 0; i < imageWidth * imageHeight; ++i) depthBuffer[i] = farClippingPlane;
 
-
     SDL_Event e;
     bool running = true;
     int ittr = 1; 
     while (running) {
         for (ittr > 0; ittr--;)
         {
-
         // Start timer so we can gather frame generation statistics
         auto t_start = std::chrono::high_resolution_clock::now();
 
@@ -414,22 +368,6 @@ int main(int argc, char **argv)
 
         Vec3f light_dir(10, -10,-10);
 
-        // TASK 5
-        // Currently the worldToCamera matrix is hard coded, and if convertToRaster is correctly implemented you will 
-        // have an image of the model rasterised and displayed to the SDL_Window. 
-        // You now need to create a system for a camera matrix to be constructed. The easiest way of doing this is by the 
-        // lookAt() method described in the lecture notes for the Viewing Transformation series. 
-        // A stub of this method is within this code and guidance on implementing it is here:
-        // https://www.scratchapixel.com/lessons/mathematics-physics-for-computer-graphics/lookat-function
-        // For eye, target and up Vec3's you should be able to return a cameraToWorld matrix to invert for a worldToCamera matrix:
-   
-     
-        // TASK 6 
-        // Implement the Arcball Camera to replace Vec3f eye(0.f, 1.f, 3.f); with Vec3f eye(camX, camY, camZ); computed each frame
-        // for increments of camAngleX, starting at 0.0f and resetting after incrementing past 360 degrees. 
-
-        // Outer loop - For every face in the model (would eventually need to be amended to be for every face in every model)
-        
         TGAColor white = TGAColor(255, 0, 255, 255);
         for (auto model : models) {
 
@@ -445,8 +383,6 @@ int main(int argc, char **argv)
             convertToRaster(v0, worldToCamera, l, r, t, b, nearClippingPlane, imageWidth, imageHeight, v0Raster);
             convertToRaster(v1, worldToCamera, l, r, t, b, nearClippingPlane, imageWidth, imageHeight, v1Raster);
             convertToRaster(v2, worldToCamera, l, r, t, b, nearClippingPlane, imageWidth, imageHeight, v2Raster);
-
-            
             
             // Precompute reciprocal of vertex z-coordinate
                 v0Raster.z = 1 / v0Raster.z,
@@ -512,7 +448,6 @@ int main(int argc, char **argv)
                             // Calculate the texture coordinate based on barycentric position of the pixel
                             Vec2f st = st0 * w0 + st1 * w1 + st2 * w2;
 
-
                             // correct for perspective distortion
                             st *= z;
 
@@ -531,7 +466,6 @@ int main(int argc, char **argv)
 
                             Vec3f pt(px * z, py * z, -z); // pt is in camera space
                           
-
                             // Compute the face normal which is used for a simple facing ratio.
                             // Keep in mind that we are doing all calculation in camera space.
                             // Thus the view direction can be computed as the point on the object
@@ -562,10 +496,8 @@ int main(int argc, char **argv)
                             unsigned char* tdata = model_text.buffer();
                                                         
                             //TGAColor tCol = TGAColor(tdata[x + y * model_text.get_width()] , 3);
-
                             // Set the pixel value on the SDL_Surface that gets drawn to the SDL_Window
-
-                          
+                                                      
                             Uint32 colour = SDL_MapRGB(screen->format, nDotView * 255,  nDotView * 255 , nDotView * 255);
 
                             putpixel(screen, x, y, colour);
@@ -610,7 +542,6 @@ int main(int argc, char **argv)
         line(1, imageHeight - 2, imageWidth - 2, imageHeight - 2, scene_image, blue);
         scene_image.write_tga_file("output.tga");
 
-
         // Check for ESC sequence, otherwise keep drawing frames
         if (SDL_PollEvent(&e))
         {
@@ -634,7 +565,6 @@ int main(int argc, char **argv)
                     scene_image.flip_vertically();
                     scene_image.write_tga_file("output.tga");
 
-                    
                     break;
                 }
                 break;
@@ -648,10 +578,8 @@ int main(int argc, char **argv)
 
         // Clean up heap allocation
         SDL_DestroyTexture(texture);
-
     }
 
-    // tidy up dangling pointer to the depth buffer
     delete [] depthBuffer;
 
     for (int i = models.size() - 1; i >= 0; i--) {
